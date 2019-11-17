@@ -2,7 +2,6 @@ package com.example.doantest;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
