@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "23187392762",
+    "firebase_url": "https://my-test-login-app-a9e3e.firebaseio.com",
+    "project_id": "my-test-login-app-a9e3e",
+    "storage_bucket": "my-test-login-app-a9e3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23187392762:android:d364f63b852e06dde5e143",
+        "android_client_info": {
+          "package_name": "com.example.doantest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23187392762-9lc6jo5fmvt138aarsd1h6ong1m1lj8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1S6Pe_-3YK9x1_OW1HiG3VvenpyQOIGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23187392762-9lc6jo5fmvt138aarsd1h6ong1m1lj8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23187392762:android:fab2a7932167a20fe5e143",
+        "android_client_info": {
+          "package_name": "com.example.testloginapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23187392762-9lc6jo5fmvt138aarsd1h6ong1m1lj8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1S6Pe_-3YK9x1_OW1HiG3VvenpyQOIGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23187392762-9lc6jo5fmvt138aarsd1h6ong1m1lj8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23187392762:android:ebe7890621f1ea64e5e143",
+        "android_client_info": {
+          "package_name": "com.example.zxc.firebaseauthen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23187392762-9lc6jo5fmvt138aarsd1h6ong1m1lj8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1S6Pe_-3YK9x1_OW1HiG3VvenpyQOIGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23187392762-9lc6jo5fmvt138aarsd1h6ong1m1lj8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
