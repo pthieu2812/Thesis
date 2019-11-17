@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/room"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="59dp"
+            android:src="@drawable/ac" />
+
+        <RadioGroup
+            android:id="@+id/acGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_below"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/acOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ON" />
+
+            <RadioButton
+                android:id="@+id/acOFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="OFF" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="59dp"
+            android:src="@drawable/lamp" />
+
+        <RadioGroup
+            android:id="@+id/lampGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_below"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/lampON"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ON" />
+
+            <RadioButton
+                android:id="@+id/lampOFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="OFF" />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Chọn thời gian bạn muốn tắt"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/timeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_below"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sáng"
+                android:checked="true"
+                />
+
+            <RadioButton
+                android:id="@+id/afternoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chiều" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+       <Button
+           android:id="@+id/tiet2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Tiết 2"/>
+        <Button
+            android:id="@+id/tiet3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiết 3"/>
+        <Button
+            android:id="@+id/tiet4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiết 4"/>
+        <Button
+            android:id="@+id/tiet5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiết 5"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeOff"
+        android:text="Tắt vào lúc: Chưa chọn"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+</LinearLayout>
