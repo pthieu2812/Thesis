@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
+import androidx.fragment.app.DialogFragment;
 
 import java.sql.Time;
 import java.text.ParseException;
@@ -23,10 +24,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import android.widget.TimePicker;
 
 public class DialogClassTest extends AppCompatDialogFragment {
     private DialogListener listener;
-    private Button timeBtn;
+    private Button offall;
     private TextView room, timeoff;
     private RadioGroup acGroup;
     private RadioGroup lampGroup;
@@ -58,6 +60,17 @@ public class DialogClassTest extends AppCompatDialogFragment {
         final Button tiet3 = (Button) view.findViewById(R.id.tiet3);
         final Button tiet4 = (Button) view.findViewById(R.id.tiet4);
         final Button tiet5 = (Button) view.findViewById(R.id.tiet5);
+        final Button offall = (Button) view.findViewById(R.id.offallbtn);
+
+        offall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myFlag = true;
+                lampState = "0";
+                acState = "0";
+                timeoff.setText("Tắt hết thiết bi!̣");
+            }
+        });
 
         tiet2.setOnClickListener(new View.OnClickListener() {
             @Override

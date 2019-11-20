@@ -82,7 +82,14 @@
                 android:checked="true"
                 android:text="OFF" />
         </RadioGroup>
+
     </LinearLayout>
+    <Button
+        android:id="@+id/offallbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Tắt hết thiết bị"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
