@@ -69,10 +69,9 @@ public class LoginActivity extends AppCompatActivity {
                 new Runnable() {
                     @Override
                     public void run() {
-                        String email = emailID.getText().toString();
+                        final String email = emailID.getText().toString();
                         String pwd = password.getText().toString();
                         if (!email.isEmpty() && !pwd.isEmpty()) {
-
                             mFirebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -81,8 +80,16 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                     else {
                                         Toast.makeText(LoginActivity.this, " Đăng nhập thành công", Toast.LENGTH_LONG).show();
-                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                        startActivity(intent);
+                                        String admin = "admin@gmail.com";
+                                        int isAdmin = email.compareTo(admin);
+                                        if(isAdmin == 0) {
+                                            Intent intent = new Intent(LoginActivity.this, admin.class);
+                                            startActivity(intent);
+                                        }
+                                        else {
+                                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                            startActivity(intent);
+                                        }
                                     }
                                 }
                             });
