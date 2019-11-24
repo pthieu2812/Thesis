@@ -36,7 +36,7 @@ public class admin extends AppCompatActivity {
                     toolbar.setTitle("Home");
                     break;
                 case R.id.nav_Setting:
-                    selectedFragment = new TestFragment();
+                    selectedFragment = new EditFragment();
                     toolbar.setTitle("Account Setting");
                     break;
             }

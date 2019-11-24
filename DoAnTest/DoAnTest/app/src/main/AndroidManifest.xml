@@ -14,8 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admin">
-        </activity>
+        <activity android:name=".NewAccount"></activity>
+        <activity android:name=".ResetPass" />
+        <activity android:name=".admin" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

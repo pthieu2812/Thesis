@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    tools:context=".LoginActivity">
+    tools:context=".NewAccount">
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -16,8 +17,19 @@
         android:layout_marginTop="30dp"
         app:srcCompat="@drawable/hcmute" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Tạo tài Khoản"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <EditText
-        android:id="@+id/emailID"
+        android:id="@+id/regEmail"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -26,31 +38,34 @@
         />
 
     <EditText
-        android:id="@+id/password"
+    android:id="@+id/regPas"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_gravity="center"
+    android:ems="10"
+    android:inputType="textPassword"
+    android:hint="Password"
+    />
+
+    <EditText
+        android:id="@+id/regPasConfirm"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Password"
-        />
-
+        android:hint="Confirm Password" />
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/regBtn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        android:text="Đăng Nhập"
+        android:text="SIGN UP"
         />
 
-    <TextView
-        android:id="@+id/forgotpassword"
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quên Mật khẩu?"
-        android:layout_gravity="center"
-        />
+
+
 </LinearLayout>
