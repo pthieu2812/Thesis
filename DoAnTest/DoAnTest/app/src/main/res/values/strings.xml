@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">DoAnTest</string>
+    <string-array name="roomB">
+        <item>B101</item>
+        <item>B102</item>
+        <item>B103</item>
+        <item>B104</item>
+        <item>B105</item>
+    </string-array>
+
+    <string-array name="roomA">
+        <item>A101</item>
+        <item>A102</item>
+        <item>A103</item>
+        <item>A104</item>
+        <item>A105</item>
+    </string-array>
+
+    <string-array name="roomC">
+        <item>C101</item>
+        <item>C102</item>
+        <item>C103</item>
+        <item>C104</item>
+        <item>C105</item>
+    </string-array>
+
 </resources>

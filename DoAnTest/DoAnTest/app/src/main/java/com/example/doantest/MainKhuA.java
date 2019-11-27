@@ -48,12 +48,12 @@ public class MainKhuA extends AppCompatActivity implements DialogClassTest.Dialo
 
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
-                Toast.makeText(MainKhuA.this, message.toString(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainKhuA.this, message.toString(), Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void deliveryComplete(IMqttDeliveryToken token) {
-                Toast.makeText(MainKhuA.this, "Gửi yêu cầu thành công!", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainKhuA.this, "Gửi tín hiệu thành công!", Toast.LENGTH_LONG).show();
             }
         });
         //ListView

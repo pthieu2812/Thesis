@@ -13,9 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class EditFragment extends Fragment {
-    ImageView addAcc, changePass;
+import com.google.firebase.auth.FirebaseAuth;
 
+public class EditFragment extends Fragment {
+    ImageView addAcc, changePass, logOut, addRFID;
+    private FirebaseAuth mFirebaseAuth;
     public EditFragment() {
         // Required empty public constructor
     }
@@ -34,7 +36,9 @@ public class EditFragment extends Fragment {
         //Ánh xạ
         addAcc = (ImageView) view.findViewById(R.id.addAccount);
         changePass = (ImageView) view.findViewById(R.id.changepass);
-
+        logOut = (ImageView) view.findViewById(R.id.logOut);
+        addRFID = (ImageView) view.findViewById(R.id.addRFID);
+        mFirebaseAuth = FirebaseAuth.getInstance();
         addAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +51,22 @@ public class EditFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mFirebaseAuth.signOut();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        addRFID.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), RfidActivity.class);
+                startActivity(intent);
             }
         });
         return view;

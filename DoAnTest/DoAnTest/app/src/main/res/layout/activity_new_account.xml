@@ -57,14 +57,15 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="Confirm Password" />
+
     <Button
         android:id="@+id/regBtn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        android:text="SIGN UP"
-        />
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#03A9F4"
+        android:text="Tạo" />
 
 
 

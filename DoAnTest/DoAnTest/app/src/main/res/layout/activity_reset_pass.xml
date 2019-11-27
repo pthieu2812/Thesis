@@ -21,6 +21,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:textSize="30dp"
+        android:textColor="@android:color/black"
         android:text="Quên mật khẩu?"/>
 
     <EditText
@@ -36,10 +37,10 @@
         android:id="@+id/resetBtn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
-        android:text="Reset Password"
-        />
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#03A9F4"
+        android:text="Reset Password" />
 
 <!--    <TextView-->
 <!--        android:id="@+id/resetbackBtn"-->
