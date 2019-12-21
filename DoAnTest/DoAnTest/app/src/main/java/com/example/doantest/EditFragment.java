@@ -50,7 +50,8 @@ public class EditFragment extends Fragment {
         changePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), RoomStatusActitivty.class);
+                startActivity(intent);
             }
         });
         logOut.setOnClickListener(new View.OnClickListener() {

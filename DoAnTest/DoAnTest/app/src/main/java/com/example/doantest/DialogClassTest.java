@@ -246,7 +246,7 @@ public class DialogClassTest extends AppCompatDialogFragment {
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                            listener.sendMess(roomID, "LED:" + lampState + " AC:" + acState + " LAMP:" + fanState + " ENDTIME:" + offtime, myFlag);
+                            listener.sendMess(roomID, "LED:" + lampState + " AC:" + acState + " FAN:" + fanState + " ENDTIME:" + offtime, myFlag);
                     }
                 });
         return builder.create();

@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RfidActivity"></activity>
+        <activity android:name=".RoomStatusActitivty"></activity>
+        <activity android:name=".RfidActivity" />
         <activity android:name=".NewAccount" />
         <activity android:name=".ResetPass" />
         <activity android:name=".admin" />
