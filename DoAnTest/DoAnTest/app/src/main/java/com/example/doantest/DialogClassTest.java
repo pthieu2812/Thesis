@@ -33,10 +33,12 @@ public class DialogClassTest extends AppCompatDialogFragment {
     private RadioGroup acGroup;
     private RadioGroup lampGroup;
     private RadioGroup timeGroup;
+    private RadioGroup fanGroup;
     private boolean myFlag = false;
     private boolean isMorning = true;
     String acState = "0";
     String lampState = "0";
+    String fanState = "0";
     String offtime = "OFF";
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class DialogClassTest extends AppCompatDialogFragment {
         room = (TextView) view.findViewById(R.id.room);
         acGroup = (RadioGroup) view.findViewById(R.id.acGroup);
         lampGroup = (RadioGroup) view.findViewById(R.id.lampGroup);
+        fanGroup = (RadioGroup) view.findViewById(R.id.fanGroup);
         timeGroup = (RadioGroup) view.findViewById(R.id.timeGroup);
         //
         timeoff = (TextView) view.findViewById(R.id.timeOff);
@@ -68,6 +71,10 @@ public class DialogClassTest extends AppCompatDialogFragment {
                 myFlag = true;
                 lampState = "0";
                 acState = "0";
+                fanState = "0";
+                fanGroup.check(R.id.fanOFF);
+                acGroup.check(R.id.acOFF);
+                lampGroup.check(R.id.lampOFF);
                 timeoff.setText("Tắt hết thiết bi!̣");
             }
         });
@@ -192,6 +199,19 @@ public class DialogClassTest extends AppCompatDialogFragment {
             }
         });
 
+        fanGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if(checkedId == R.id.fanOn) {
+                    fanState = "1";
+                }
+                if(checkedId == R.id.fanOFF) {
+                    fanState = "0";
+                }
+            }
+        });
+
 
         timeGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -226,7 +246,7 @@ public class DialogClassTest extends AppCompatDialogFragment {
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                            listener.sendMess(roomID, "LED:" + lampState + " AC:" + acState + " ENDTIME:" + offtime, myFlag);
+                            listener.sendMess(roomID, "LED:" + lampState + " AC:" + acState + " LAMP:" + fanState + " ENDTIME:" + offtime, myFlag);
                     }
                 });
         return builder.create();

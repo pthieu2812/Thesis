@@ -85,7 +85,7 @@ public class MainKhuA extends AppCompatActivity implements DialogClassTest.Dialo
             mqttHelper.publishToTopic("KhuA/" + roomID, mess);
         }
         else  {
-            Toast.makeText(MainKhuA.this, "Bạn chưa chọn Tiết tắt thiết bị! Vui lòng chọn lại", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainKhuA.this, "Bạn chưa chọn thời gian tắt thiết bị! Vui lòng chọn lại", Toast.LENGTH_LONG).show();
         }
     }
 }

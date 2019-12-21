@@ -82,8 +82,44 @@
                 android:checked="true"
                 android:text="OFF" />
         </RadioGroup>
-
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="59dp"
+            android:src="@drawable/fan" />
+
+        <RadioGroup
+            android:id="@+id/fanGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_below"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/fanOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ON" />
+
+            <RadioButton
+                android:id="@+id/fanOFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="OFF" />
+        </RadioGroup>
+    </LinearLayout>
+
     <Button
         android:id="@+id/offallbtn"
         android:layout_width="wrap_content"
