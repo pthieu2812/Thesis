@@ -166,6 +166,13 @@
                 android:layout_weight="1"
                 android:text="Chiều" />
         </RadioGroup>
+        <Button
+            android:id="@+id/editTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:text="Tự chọn"
+            android:textSize="12sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"

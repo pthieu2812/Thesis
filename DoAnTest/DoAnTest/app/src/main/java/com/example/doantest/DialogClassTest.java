@@ -28,7 +28,6 @@ import android.widget.TimePicker;
 
 public class DialogClassTest extends AppCompatDialogFragment {
     private DialogListener listener;
-    private Button offall;
     private TextView room, timeoff;
     private RadioGroup acGroup;
     private RadioGroup lampGroup;
@@ -64,6 +63,38 @@ public class DialogClassTest extends AppCompatDialogFragment {
         final Button tiet4 = (Button) view.findViewById(R.id.tiet4);
         final Button tiet5 = (Button) view.findViewById(R.id.tiet5);
         final Button offall = (Button) view.findViewById(R.id.offallbtn);
+        final Button timeEdit = (Button) view.findViewById(R.id.editTime);
+
+
+        timeEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar mcurrentTime = Calendar.getInstance();
+                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                int minute = mcurrentTime.get(Calendar.MINUTE);
+                TimePickerDialog mTimePicker;
+                mTimePicker = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                        offtime  = selectedHour + ":" + selectedMinute;
+                        try {
+                            if (compareTime(getcurrentTime(), offtime)) {
+                                timeoff.setText("Tắt vào lúc: " + offtime);
+                                myFlag = true;
+                            }
+                            else {
+                                timeoff.setText("Thời gian set không phù hợp!");
+                                myFlag = false;
+                            }
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, hour, minute, true);
+                mTimePicker.setTitle("Chọn thời gian");
+                mTimePicker.show();
+            }
+        });
 
         offall.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,7 +233,6 @@ public class DialogClassTest extends AppCompatDialogFragment {
         fanGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-
                 if(checkedId == R.id.fanOn) {
                     fanState = "1";
                 }
@@ -228,13 +258,13 @@ public class DialogClassTest extends AppCompatDialogFragment {
                     tiet2.setText("Tiết 8");
                     tiet3.setText("Tiết 9");
                     tiet4.setText("Tiết 10");
-                    tiet5.setText("Tiết 11");
+                    tiet5.setText("Tiết 11");
                 }
             }
         });
 
         room.setText("Chọn Thiết bị bạn muốn bật");
-        //
+
         builder.setView(view)
                 .setTitle(roomID)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -246,7 +276,7 @@ public class DialogClassTest extends AppCompatDialogFragment {
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                            listener.sendMess(roomID, "LED:" + lampState + " AC:" + acState + " FAN:" + fanState + " ENDTIME:" + offtime, myFlag);
+                        listener.sendMess(roomID, "LED:" + lampState + " AC:" + acState + " FAN:" + fanState + " ENDTIME:" + offtime, myFlag);
                     }
                 });
         return builder.create();
@@ -279,11 +309,11 @@ public class DialogClassTest extends AppCompatDialogFragment {
     public boolean compareTime(String currenttime, String endtime) throws ParseException {
         String pattern = "HH:mm";
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-            Date date1 = sdf.parse(currenttime);
-            Date date2 = sdf.parse(endtime);
+        Date date1 = sdf.parse(currenttime);
+        Date date2 = sdf.parse(endtime);
 
-            // Outputs -1 as date1 is before date2
-            return date1.compareTo(date2) < 0 ? true : false;
+        // Outputs -1 as date1 is before date2
+        return date1.compareTo(date2) < 0 ? true : false;
 
     }
 }
