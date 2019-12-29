@@ -94,9 +94,9 @@ android:weightSum="10"
                 android:layout_width="64dp"
                 android:layout_height="72dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/changepass" />
+                android:src="@drawable/roomstatus" />
             <TextView
-                android:text="Đổi mật khẩu"
+                android:text="Kiểm tra trạng thái"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
@@ -131,8 +131,9 @@ android:weightSum="10"
                 android:layout_height="72dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/rfid" />
+
             <TextView
-                android:text="Thêm thẻ RFID"
+                android:text="Thêm/Xóa thẻ RFID"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"

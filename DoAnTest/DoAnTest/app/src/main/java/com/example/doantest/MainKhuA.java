@@ -39,16 +39,17 @@ public class MainKhuA extends AppCompatActivity implements DialogClassTest.Dialo
             @Override
             public void connectComplete(boolean reconnect, String serverURI) {
                 mqttHelper.subscribeToTopic("KhuA/+");
+                Toast.makeText(MainKhuA.this, "Kết nối lên Broker thành công!", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void connectionLost(Throwable cause) {
-                Toast.makeText(MainKhuA.this, "Connect unSuccess!", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainKhuA.this, cause.toString(), Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
-                //Toast.makeText(MainKhuA.this, message.toString(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainKhuA.this, message.toString(), Toast.LENGTH_LONG).show();
             }
 
             @Override

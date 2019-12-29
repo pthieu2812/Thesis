@@ -17,6 +17,15 @@
         android:layout_marginEnd="21dp"
         android:text="Khu C" />
 
+    <RadioGroup
+        android:id="@+id/fanGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_below"
+        android:orientation="horizontal">
+
+    </RadioGroup>
+
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="229dp"
@@ -55,11 +64,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="71dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
         android:text="Chọn phòng có đầu đọc RFID gần bạn nhất"
-        android:textColor="@android:color/black"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="30dp" />
 
     <TextView
@@ -85,6 +94,33 @@
         android:textSize="30dp"
         android:text="Đồng ý"
         android:textColor="@android:color/white" />
+
+    <RadioGroup
+        android:id="@+id/RFIDGroup"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="108dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/addRfid_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm thẻ"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/removeRfid_radio"
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:text="Xóa thẻ" />
+    </RadioGroup>
 
 
 </RelativeLayout>

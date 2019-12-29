@@ -8,6 +8,7 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,10 @@ public class RfidActivity extends AppCompatActivity implements AdapterView.OnIte
     private Button blockA, blockB, blockC, sendBtn;
     private TextView roomchoose;
     private String block, blockS, room;
+    private RadioGroup rfidGroup;
+    private RadioGroup addRfidGroup;
+    private RadioGroup removeRfidGroup;
+    private String rfidstate = "ADD";
     MQTTHelper mqttHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,7 @@ public class RfidActivity extends AppCompatActivity implements AdapterView.OnIte
         blockB = (Button) findViewById(R.id.blockB);
         blockC = (Button) findViewById(R.id.blockC);
         sendBtn = (Button) findViewById(R.id.sendBtn);
+        rfidGroup = (RadioGroup)findViewById(R.id.RFIDGroup);
         roomchoose = (TextView) findViewById(R.id.roomChoose);
         final Spinner spinner1 = findViewById(R.id.spinner1);
         final ArrayAdapter<CharSequence> adapterA = ArrayAdapter.createFromResource(this,
@@ -77,10 +83,21 @@ public class RfidActivity extends AppCompatActivity implements AdapterView.OnIte
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mqttHelper.publishToTopic(blockS+ "/" + room, "RFID");
+                mqttHelper.publishToTopic(blockS+ "/" + room, rfidstate+"RFID");
             }
         });
 
+        rfidGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.addRfid_radio) {
+                    rfidstate = "ADD";
+                }
+                if(checkedId == R.id.removeRfid_radio) {
+                    rfidstate = "REMOVE";
+                }
+            }
+        });
         mqttHelper.setCallback(new MqttCallbackExtended() {
             @Override
             public void connectComplete(boolean reconnect, String serverURI) {

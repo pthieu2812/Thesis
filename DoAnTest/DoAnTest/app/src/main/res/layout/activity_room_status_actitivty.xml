@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@drawable/bg"
     tools:context=".RoomStatusActitivty">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/roomlist"
         android:layout_width="409dp"
-        android:layout_height="525dp"
+        android:layout_height="485dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -18,4 +18,17 @@
         android:layout_marginStart="2dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="1dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="87dp"
+        android:text="Trạng Thái Phòng Học"
+        android:textColor="@android:color/white"
+        android:textSize="34sp" />
 </RelativeLayout>
